@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="webixApp">
+<head>
+  <meta charset="utf-8">
+  <title>Webix - Angular : Chart</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+
+  <script src="http://cdn.webix.com/edge/webix.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="//cdn.webix.com/edge/webix.css">
+  <script type="text/javascript" src="../sources/index.js"></script>
+
+<!--  <script type="text/javascript" src="js/dataApp.js"></script>-->
+</head>
+<body ng-controller="View1Ctrl">
+
+<div style="width:500px; height:200px;">
+  <div webix-ui view="chart" id="mychart" webix-data="lines" type="bar" value="#sales#" borderless="true"></div>
+</div>
+
+<br>
+<button ng-click="changeLine('line')">Show Line Chart</button>
+<button ng-click="changeLine('bar')">Show Bar Chart</button>
+<div webix-ui type="space"> <!--layout rows with type "space" are created-->
+  <div height="35">Header { {app} }</div> <!--Webix template is initialized -->
+  <div view="cols" type="wide" margin="10"> <!--Webix layout cols are initialized-->
+    <div width="200">
+      <input type="text" placeholder="Type here" ng-model="app">
+    </div>
+    <div view="resizer"></div>
+    <div view="tabview">
+      <div header="Tab1">
+        1. Some content here
+      </div>
+      <div header="Tab2">
+        2. Other content here
+      </div>
+    </div>
+  </div>
+  <div height="35">Footer</div>
+</div>
+</body>
+<script src="http://cdn.webix.com/edge/webix.js" type="text/javascript"></script>
+</html>
